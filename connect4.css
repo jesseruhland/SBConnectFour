@@ -4,18 +4,40 @@
   width: 50px;
   height: 50px;
   border: solid 1px #666;
+  position: relative;
 }
 
 /* pieces are div within game table cells: draw as colored circles */
 
 .piece {
-  /* TODO: make into circles */
+  /* *DONE* TODO: make into circles */
   margin: 5px;
-  width: 80%;
-  height: 80%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  animation: dropIn 750ms
 }
 
-/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+@keyframes dropIn {
+  from {
+    top:-1000%;
+  }
+
+  to {
+    top: 0px;
+  }
+}
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: blue;
+}
+/* *DONE* TODO: make pieces red/blue,  depending on player 1/2 piece */
 
 /* column-top is table row of clickable areas for each column */
 
