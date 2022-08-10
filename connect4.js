@@ -164,3 +164,8 @@ function checkForWin() {
 
 makeBoard();
 makeHtmlBoard();
+
+//add button functionality, reload page for new game
+const button = document.querySelector('#buttonDiv');
+const newGame = () => location.reload();
+button.addEventListener('click', newGame);

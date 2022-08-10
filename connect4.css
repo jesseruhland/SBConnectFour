@@ -1,3 +1,32 @@
+#title {
+  position: relative;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+  margin-top: 5%;
+  color: white;
+}
+
+#buttonDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+button {
+  background-image: linear-gradient(white, blue 15%);
+  border: 2px solid rgb(111, 111, 255);
+  border-radius: 5px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px 15px;
+}
+
+body {
+  background-color: black;
+}
+
 /* game board table */
 
 #board td {
@@ -5,6 +34,25 @@
   height: 50px;
   border: solid 1px #666;
   position: relative;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#board {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+#game {
+  width: fit-content;
+  block-size: fit-content;
+  background-image: linear-gradient(black, black 10%, blue 110%);
+  position: relative;
+  padding: 0px 10px 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* pieces are div within game table cells: draw as colored circles */
@@ -14,7 +62,7 @@
   margin: 5px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 75%;
   position: absolute;
   top: 0px;
   animation: dropIn 750ms
@@ -31,11 +79,11 @@
 }
 
 .p1 {
-  background-color: red;
+  background-image: radial-gradient(rgb(255, 89, 230), rgb(255, 0, 217) 50%,  rgb(187, 0, 159) 80%);
 }
 
 .p2 {
-  background-color: blue;
+  background-image: radial-gradient(rgb(89, 250, 175), rgb(0, 255, 136) 50%,  rgb(0, 197, 105) 80%);
 }
 /* *DONE* TODO: make pieces red/blue,  depending on player 1/2 piece */
 
@@ -43,8 +91,9 @@
 
 #column-top td {
   border: dashed 1px lightgray;
+  background-color: black;
 }
 
 #column-top td:hover {
-  background-color: gold;
+  background-image:radial-gradient(gold, black 80%);
 }
